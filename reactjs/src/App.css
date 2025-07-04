@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans";
+    color: rgba(213,213,213,255);
+}
+
+.light{
+    font-weight: lighter;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    /* border: 10px solid red; */
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.body{
+    width: 60%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(32,32,32,255);
+}
+
+header{
+    /* border: 10px solid white; */
+    width: 90%;
+    height: 10vh;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 2em;
+    background-color: var(--background-color);
+}
+
+header section{
+    width: 100%;
+    justify-content: flex-start !important;
+}
+
+#add-task-button{
+    margin-left: auto;
+    padding: 0.1em;  
+}
+
+#add-task-button:active{
+    color: white;
+    background-color: rgba(32,32,32,255);
+}
+
+#add-task-button:hover{
+    border-radius: 0.3em; 
+    box-shadow: 0px 0px 4px 10px var(--box-shadow-color);
+}
+
+.search-bar-container{
+    position: relative;
+    height: 5vh;
+    width: 100%;
+    margin-bottom: 2em;
+    background-color: rgba(32,32,32,255);
+    border-radius: 0.4em; 
+    border: 1px solid var(--border-color);
+}
+
+.search-bar-container .fa-solid{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255, 255, 255, 0);
+    position: absolute;
+    padding: 0.5em;
+    min-width: 1em;
+}
+
+#search-bar{
+    width: 100%;
+    height: 100%;
+    padding: 0.3em 0 0.3em 2.5em;
+    margin-bottom: 1em;
+    background-color: transparent;
+    /* 
+    Without border: none, it adds a shadow-box like undertone to the border of
+    .search-bar-container
+    */
+    border: none;
+    border-radius: 0.4em; 
+    /* border: 1px solid var(--border-color); */
+}
+
+@media screen and (max-width: 850px){
+    .body{
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .background{
+        width: 100%;
+        height: 100vh;
+        background-color: var(--background-color);
+    }
+
+    .body{
+        width: 90%;
+        height: 100%;
+    }
+
+    header{
+        width: 90%;
+        height: 10vh;
+        gap: 5px;
+    }
+
+    #search-bar{
+        width: 100%;
+        padding-left: 0.5em;
+        margin: 0.6em 0 0.7em 0;
+        border-radius: 0.4em; 
+    }
+}

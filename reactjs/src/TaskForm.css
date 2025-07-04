@@ -1,0 +1,129 @@
+.task-panel{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     z-index: 999;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid var(--border-color);
+    width: 35%;
+    height: 70vh;
+    gap: 0.3em;
+    padding-top: 0.5em;
+    padding-right: 0.1em;
+    border-radius: 0.5em; 
+    background-color: rgba(33,33,33,255);
+}
+
+.task-panel label{
+    display: flex;
+    width: 93%;
+    height: 1.5em;
+    gap: 0.5em;
+}
+
+.task-panel input, select{
+    width: 60%;
+    margin-left: auto;
+    color: white;
+    background-color: rgba(37,37,37,255);
+    border: 1px solid var(--border-color);
+}
+
+.task-id{
+    width: 93%;
+}
+
+.panel-header{
+    width: 100%;
+}
+
+.panel-header h3{
+    margin: auto;
+}
+
+#exit-button {
+    position: relative;
+    right: 0.5em; 
+}
+    
+#exit-button :hover{
+    color: white;
+    border-radius: 1em;
+    box-shadow: 0px 0px 2px 8px var(--box-shadow-color);
+}
+    
+#description-label{
+    flex-direction: column;height: 60%!important;
+    width: 95%!important;
+    margin: auto;
+}
+
+textarea{
+    width: 98%;
+    height: 98%;
+    resize: none;
+    margin: auto;
+    padding: 0.5em;
+    color: white;
+    background-color: rgba(37,37,37,255);
+    border: 1px solid var(--border-color);
+}
+
+form button{
+    width: 93%;
+    padding: 0.3em;
+    margin-bottom: 0.6em;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+}
+
+.submit-button{
+    margin-top: 0.3em;
+}
+    
+.delete-button{
+    margin-top: -0.5em;
+}
+
+
+@media screen and (max-width: 700px){
+    .task-panel{
+        position: absolute;
+        width: 80%;
+        height: 55vh;   
+    }
+
+    .task-panel label{
+        width: 93%;
+        height: 1.5em;
+        gap: 0.5em;
+    }
+
+    .task-panel input, select{
+        width: 60%;
+        margin-left: auto;
+    }
+
+    .panel-header{
+        width: 100%;
+    }
+
+    .panel-header h3{
+        margin: auto;
+    }
+
+    #exit-button {
+        position: relative;
+        right: 0.5em;
+    }
+
+    #description-label{
+        flex-direction: column;
+        height: 60%!important;
+        width: 95%!important;
+        margin: auto;
+    }
+}
+
