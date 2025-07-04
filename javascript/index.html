@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To Do List Website</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/javascript/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="flex-center">
+            <section class="flex-center">
+                <h1 class="title">To Do List</h1>
+                <i class="fa-solid fa-plus" id="add-task-button"></i>
+            </section>
+            <input type="text" id="search-bar" name="search-bar" placeholder="Search by Title or ID"/>
+        </header>
+
+        <main class="flex-center">
+
+            <!-- Task form -->                          
+            <form id="task-panel" class="task-panel flex-center hidden" onsubmit="return false;">
+                <section class="panel-header flex-center">
+                    <h3>Create a new task</h3>
+                    <i class="fa-solid fa-xmark" id="exit-button"></i>
+                </section>
+
+                <label for="title" id="title-label"> Task Name: 
+                    <input type="text" id="title" name="title" placeholder="Task title" required>
+                </label>
+
+                <label for="date" id="date-label"> Deadline:
+                    <input type="date" id="date" name="date" required>
+                </label>
+
+                <label for="status" id="status-label"> Status:
+                    <select id="status" name="status" required>
+                        <option value="Pending" >Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Done">Done</option>
+                    </select>
+                </label>
+
+                <div class="task-id">
+                    <p>Id: <span id="task-id"></span></p>
+                </div>
+                
+                <label for="description" id="description-label"> Description:
+                    <textarea id="description" name="description" required></textarea>
+                </label>
+
+                <button type="submit" id="submit-button" class="submit-button">Submit</button>
+                <button type="button" id="delete-button" class="delete-button hidden">Delete</button>
+            </form>
+
+            <div class="task-item-list" id="task-item-list">
+        <!--   <div class="task-item" id="${id}">
+                    <section class="title-date-section">
+                        <h4><b>${title}</b></h4> 
+                        <h5 class="light">${formatDate(date)}</h5>
+                        <h5 class="light">ID: ${id}</h5>
+                    </section>
+
+                    <section class="status-section">
+                        <p class="status-border" 
+                        style="background-color:${status === "Done" ? "lightgreen" : 
+                                                    status === "In Progress" ? "yellow" : "red"};">${status}</p>
+                    </section>
+                </div> -->
+            </div>
+        </main>
+
+        <script src="index.js" async defer></script>
+        <script src="https://kit.fontawesome.com/fa27c25f5a.js" crossorigin="anonymous"></script>
+    </body>
+</html>

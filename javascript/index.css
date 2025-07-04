@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans";
+}
+
+.hidden{
+    display: none!important;
+}
+
+.light{
+    font-weight: lighter;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+header{
+    width: 90%;
+    height: 10vh;
+    flex-direction: column;
+    gap: 5px;
+
+    section{
+        width: 100%;
+        justify-content: flex-start !important;
+    }
+}
+
+#add-task-button{
+    margin-left: auto;
+    padding: 0.1em;
+
+    &:active{
+        color: white;
+        background-color: black;
+    }
+
+    &:hover{
+        border-radius: 0.3em; 
+        box-shadow: 0px 0px 2px 2px gray;
+    }
+}
+
+#search-bar{
+    width: 100%;
+    padding: 0.3em 0 0.3em 0;
+    padding-left: 0.5em;
+    margin-bottom: 1em;
+    border-radius: 0.4em; 
+}
+
+main{
+    /* border: 1px solid rgb(218, 216, 216); */
+    border-radius: 0.5em;
+    width: 90%;
+    height: 85vh;
+}
+
+.task-panel{
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid black;
+    width: 30%;
+    height: 55vh;
+    gap: 0.3em;
+    padding-top: 0.5em;
+    padding-right: 0.1em;
+    border-radius: 0.5em; 
+    background-color: rgb(129, 129, 185);
+
+    label{
+        display: flex;
+        width: 93%;
+        height: 1.5em;
+        gap: 0.5em;
+    }
+
+    input, select{
+        width: 60%;
+        margin-left: auto;
+    }
+    
+    .task-id{
+        width: 93%;
+    }
+}
+
+.panel-header{
+    width: 100%;
+
+    h3{
+        margin: auto;
+    }
+
+    #exit-button {
+        position: relative;
+        right: 0.5em;
+
+        &:hover{
+            color: white;
+        }
+    }
+}
+    
+#description-label{
+flex-direction: column;height: 60%!important;
+width: 95%!important;
+margin: auto;
+
+    textarea{
+        width: 98%;
+        height: 98%;
+        resize: none;
+        margin: auto;
+        padding: 0.5em;
+    }
+}
+
+.task-item-list{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 10vh;
+     margin-bottom: auto;
+
+    .task-item{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+
+            section{
+                display: flex;
+                padding: 0.3em;
+            }
+
+            .title-date-section{
+                flex-direction: column;
+            }
+
+            .status-section{
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .status-border{
+                border-radius: 1em;
+                padding: 0.3em;
+            }
+
+            &:hover{
+                background-color: rgb(230, 218, 218);
+            }
+
+            &:active{
+                color: white;
+                background-color: black;
+            }
+    }
+}
+    
+.submit-button{
+    width: 93%;
+    padding: 0.3em;
+    margin-top: 0.3em;
+    margin-bottom: 0.6em;
+}
+
+.delete-button{
+    width: 93%;
+    padding: 0.3em;
+    margin-top: -0.5em;
+    margin-bottom: 0.6em;
+}
+
+@media screen and (max-width: 700px){
+    body{
+        width: 100%;
+        height: 100vh;
+    }
+
+    header{
+        width: 90%;
+        height: 10vh;
+        gap: 5px;
+    }
+
+    #search-bar{
+        width: 100%;
+        padding-left: 0.5em;
+        margin: 0.6em 0 0.7em 0;
+        border-radius: 0.4em; 
+    }
+
+    main{
+        /* border: 1px solid rgb(255, 255, 255); */
+        width: 90%;
+        height: 85vh;
+    }
+
+    .task-panel{
+        position: absolute;
+        width: 80%;
+        height: 55vh;
+        gap: 0.3em;
+        padding-top: 0.5em;
+        padding-right: 0.1em;
+        border-radius: 0.5em; 
+        background-color: rgb(129, 129, 185);
+        margin: auto;
+
+        label{
+            width: 93%;
+            height: 1.5em;
+            gap: 0.5em;
+        }
+
+        input, select{
+            width: 60%;
+            margin-left: auto;
+        }
+    }
+
+    .panel-header{
+        width: 100%;
+
+        h3{
+            margin: auto;
+        }
+
+        #exit-button {
+            position: relative;
+            right: 0.5em;
+        }
+
+        #description-label{
+            flex-direction: column;
+            height: 60%!important;
+            width: 95%!important;
+            margin: auto;
+        }
+    }
+
+    .task-item-list{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 10vh;
+        margin-bottom: auto;
+
+        .task-item{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+
+            section{
+                display: flex;
+                padding: 0.3em;
+            }
+
+            .title-date-section{
+                flex-direction: column;
+            }
+
+            .status-section{
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+}
